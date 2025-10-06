@@ -8,6 +8,12 @@ class MeditationApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const title = 'Meditation';
-    return const MaterialApp(title: title, home: OnboardingPage());
+    const debugShowCheckedModeBanner = false;
+    const home = OnboardingPage();
+    return const MaterialApp(
+      title: title,
+      home: home,
+      debugShowCheckedModeBanner: debugShowCheckedModeBanner,
+    );
   }
 }

@@ -22,18 +22,18 @@ flutter:
   uses-material-design: true
 
   assets:
-  - assets/fonts
-  - assets/images
-  - assets/icons
+  - assets/images/
+  - assets/icons/
+
   fonts:
   - family: HelveticaNeue
     fonts:
-    - asset: assets/font/HelveticaNeueLight.otf
-    - asset: assets/font/HelveticaNeueMedium.otf
+    - asset: assets/fonts/HelveticaNeueLight.otf
+    - asset: assets/fonts/HelveticaNeueMedium.otf
       weight: 600
-    - asset: assets/font/HelveticaNeueBold.otf
+    - asset: assets/fonts/HelveticaNeueBold.otf
       weight: 700
-    - asset: assets/font/HelveticaNeueThin.otf
+    - asset: assets/fonts/HelveticaNeueThin.otf
       weight: 300
 
 flutter_gen:

@@ -1,0 +1,49 @@
+name: meditation_application
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.0-162.1.beta
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.2.1
+
+dev_dependencies:
+  build_runner: ^2.9.0
+  flutter_gen_runner: ^5.12.0
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^10.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+  - assets/fonts
+  - assets/images
+  - assets/icons
+  fonts:
+  - family: HelveticaNeue
+    fonts:
+    - asset: assets/font/HelveticaNeueLight.otf
+    - asset: assets/font/HelveticaNeueMedium.otf
+      weight: 600
+    - asset: assets/font/HelveticaNeueBold.otf
+      weight: 700
+    - asset: assets/font/HelveticaNeueThin.otf
+      weight: 300
+
+flutter_gen:
+  assets:
+    enabled: true
+    outputs:
+      package_parameter_enabled: true
+  output: lib/.generated/
+  line_length: 80
+
+  integrations:
+    image: true
+    flutter_svg: true

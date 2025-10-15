@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../core/core.dart';
+
 @immutable
 abstract final class ApplicationDesign {
   static const palettes = _ColorPalettes();
@@ -59,13 +61,29 @@ abstract final class _ApplicationThemeFactory {
     final colorScheme = _buildColorSchemeFromPalette(brightness, colors);
     final textTheme = _buildTextThemeFromScheme(colorScheme);
 
+    final textFieldStyle = ApplicationTextFieldStyle(
+      fillColor: brightness == Brightness.light
+          ? colors.tertiary?.main
+          : colors.secondary.main,
+      border: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+        borderSide: BorderSide.none,
+      ),
+      contentPadding: const EdgeInsets.only(top: 8),
+      hintStyle: textTheme.bodyMedium?.copyWith(
+        color: colorScheme.onSurface.withValues(alpha: 0.5),
+      ),
+    );
+
     return ThemeData(
       useMaterial3: true,
       brightness: brightness,
       colorScheme: colorScheme,
       textTheme: textTheme,
       scaffoldBackgroundColor: colorScheme.surface,
-      extensions: <ThemeExtension<dynamic>>[],
+      extensions: <ThemeExtension<dynamic>>[
+        ApplicationTextFieldTheme(style: textFieldStyle),
+      ],
     );
   }
 

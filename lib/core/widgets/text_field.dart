@@ -13,13 +13,12 @@ class ApplicationTextFieldStyle {
     this.border,
     this.contentPadding,
   });
+
   ApplicationTextFieldStyle copyWith({
     TextStyle? hintStyle,
     Color? fillColor,
     InputBorder? border,
     EdgeInsetsGeometry? contentPadding,
-    double? height,
-    EdgeInsetsGeometry? margin,
   }) {
     return ApplicationTextFieldStyle(
       hintStyle: hintStyle ?? this.hintStyle,

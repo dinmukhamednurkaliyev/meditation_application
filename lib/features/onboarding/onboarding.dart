@@ -1,1 +1,1 @@
-export 'pages/pages.dart';
+export 'onboarding_page.dart';

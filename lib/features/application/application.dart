@@ -1,2 +1,2 @@
-export 'meditation_application.dart';
-export 'widgets/widgets.dart';
+export 'application_root_widget.dart';
+export 'application_design_system.dart';
